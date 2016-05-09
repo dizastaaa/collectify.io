@@ -4,7 +4,9 @@
 app.directive('decorateItem', function () {
     //Return de l'objet avec ses propriétés
     return {
-        template: 'Item "{{ item.name }}" dans la categorie {{ item.category_id }}'
+        templateUrl: 'views/item/directive/decorator.html'
+       //Restriction (ne match que sur un élément)
+       // restrict: 'C';
     }
     
 })

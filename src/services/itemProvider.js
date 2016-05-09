@@ -15,4 +15,19 @@ app.service('itemProvider', function () {
         //Possibilité de récupération via BD ou via un Service ($http) ou API
     }
     
+  //Ajout des items
+    this.create = function(item) {
+        //Récupération BD
+        items.push(item);
+        
+        return items;
+    }
+    
+    //Suppression
+    this.delete = function(item) {
+        items.delete(item);
+        
+        return items;
+    }
+    
 });
